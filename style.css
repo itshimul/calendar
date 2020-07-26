@@ -1,0 +1,149 @@
+body, p{
+    margin: 0;
+    padding: 0;	
+}
+ul{
+	margin:5px;
+	padding:0;
+}
+body{
+	background:url('60523.jpg');
+	background-position-x: right;
+	background-size:cover;
+	background-attachment: fixed;
+}
+
+.calendar{
+	width:80%;
+	margin:0 auto;
+	display: flex;
+}
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6{
+	width:50%;	
+}
+.heading{	
+    text-transform: capitalize;
+    font-family: cursive;
+    color: #0bf512;
+    text-shadow: 1px 3px #ff0000;
+    position: absolute;
+    left: 565px;
+    top: 50px;
+}
+.header{	
+	height:100px;
+	min-height:120px;
+	width:80%;
+	margin:0 auto;
+	/*background: linear-gradient(360deg, #a73765, transparent);*/
+	background: url('20200726.jpg');
+	background-position: inherit;
+    background-attachment: fixed;
+}
+
+.bowl{
+	background: linear-gradient(360deg, yellow, red);
+	width: 50px;
+    height: 50px;    
+    border-radius: 50%;
+	position:absolute;
+	left: 661px;
+    top: 20px;
+}
+
+
+.header:hover .heading{
+	animation:sidein 10s ease-in-out 0.3s infinite alternate;
+}
+@keyframes sidein {
+	0% {
+		left: 565px;
+		top:50px;
+	}
+	25%{
+		
+		left:10%;
+		top:0;
+	}
+	50%{
+		left: 565px;
+		top:50px;
+		
+	}
+	75%{
+		left:73%;
+		top:0;
+		
+	}
+	100% {
+		left: 565px;
+		top:50px;
+		
+	}
+}
+h2{
+	text-align:center;
+	text-transform: capitalize;
+	font-family: cursive;
+	color:white;
+}
+ul.day li{
+	background:black;
+	color:white;
+	text-transform:uppercase;
+	text-transform: capitalize;
+    font-family: cursive;
+}
+ul.day li:hover{
+	background:black;
+	color:white;
+}
+
+ul{
+	display:grid;
+	grid-template-columns:repeat(7, 1fr);
+}
+li{
+	list-style: none;
+    font-size: 1.5em;
+    height: 50px;
+    background: #509a97;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1px;
+	transition:background 0.3s ease;
+}
+ul li:hover{
+	background:lightblue;
+	color:red;
+}
+.others{
+	background: #b5a6a6;
+    color: gray;	
+}
+.others:hover{
+	background: #e6dcdc;
+    color: gray;	
+}
+.today{
+	background:gray;
+	color:white;
+}
+
+.footer{
+	background:black;
+	color: #777;
+	font-family: serif;
+	padding:5px 0;
+	text-align:center;
+}
+@media only screen and (max-width: 900px) {
+  .calendar{	
+	display: block;
+	width:90%;
+}
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6{
+	width:100%;	
+}
+}
